@@ -1,0 +1,122 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 264 128)
+	(text "control" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CODE[8..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "CODE[8..0]" (rect 21 43 69 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "RUN" (rect 0 0 22 12)(font "Arial" ))
+		(text "RUN" (rect 21 59 43 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RESET" (rect 0 0 34 12)(font "Arial" ))
+		(text "RESET" (rect 21 75 55 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "DONE" (rect 0 0 28 12)(font "Arial" ))
+		(text "DONE" (rect 199 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 1))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "MODE" (rect 0 0 29 12)(font "Arial" ))
+		(text "MODE" (rect 198 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "REG_EN[9..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "REG_EN[9..0]" (rect 165 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "MULTI_SELECT[9..0]" (rect 0 0 94 12)(font "Arial" ))
+		(text "MULTI_SELECT[9..0]" (rect 133 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(parameter
+		"MV"
+		"000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MVI"
+		"001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADD"
+		"010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUB"
+		"011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LDY"
+		"100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"UDX"
+		"101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LDI"
+		"110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 232 96)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 264 -64 364 16))
+)

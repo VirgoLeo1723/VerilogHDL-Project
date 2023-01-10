@@ -1,0 +1,488 @@
+\chap{First Project on PSpice}
+
+\section{Introduction}
+PSpice for TI is a design and simulation environment that helps evaluate functionality of analog circuits. This full-featured, design and simulation suite uses an analog analysis engine from Cadence®. Available at no cost, PSpice for TI includes one of the largest model libraries in the industry, spanning our analog and power portfolio, as well as select analog behavioral models.\\
+
+The PSpice for TI design and simulation environment allows you to simulate complex mixed-signal designs with its built-in library. Create complete end equipment designs and prototype your solutions before you commit to layout and fabrication, reducing time to market and development cost. \\
+
+Within the PSpice for TI design and simulation tool, you can search for TI devices, explore the portfolio, open test benches and simulate your design to further analyze the selected device. You can also run co-simulation of multiple TI devices to better represent your system.\\
+
+In addition to a full library of preloaded models, you can easily access the latest technical collateral for TI devices within the PSPICE-FOR-TI tool. After you have verified that you have the correct device for your application, you can access the TI store to purchase the product. Using PSpice for TI, you have access to tools to address your simulation needs as you progress through the design cycle, from circuit exploration to design development and verification. Available at no cost, it is easy to get started.\\
+
+A primary purpose of this lab is for you to become familiar with the use of PSpice and to learn to use it to assist you in the analysis of circuits (e.g. double check the results with your exercise). The software is required to  install in your computer. Moreover, it is your responsibility to learn its use in a more detailed way since you will be using it along the course of this semester and in the future.
+The targets in the first manual are summarized as follows:
+\begin{itemize}
+    \item PSpice installation on Windows OS
+    \item Create a project on PSpice
+    \item Create a bias analysis profile
+    \item Run the simulation and obtain results
+\end{itemize}
+\newpage
+\section{PSpice installation}
+The homepage to install this tool is located at \link{https://www.ti.com/tool/PSPICE-FOR-TI}. 
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic1.PNG}
+    \caption{\textit{Homepage to download PSpice}}
+    \label{bai1_pic1}
+\end{figure}
+
+By clicking on the \textbf{Download} button, the website is navigated as follows:
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic2.PNG}
+    \caption{\textit{Request information for downloading}}
+    \label{bai1_pic2}
+\end{figure}
+
+Basically, you need to login before requesting a setup file. Please follow the manuals from the website to accomplish this process. An email with an access key will be sent to your account to activate the PSpice software.
+
+\section{Create a project on PSpice}
+\textbf{Step 1: } Launch PSpice for TI from windows start menu.
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic4.PNG}
+    \caption{\textit{Create a new project on PSpice}}
+    \label{bai1_pic3}
+\end{figure}
+
+From menu \textbf{File}, select \textbf{New}, then select \textbf{Project}.
+
+\textbf{Step 2: } Create an empty project as follows.
+\newpage
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic5.PNG}
+    \caption{\textit{Provide the name, location and select a blank project}}
+    \label{bai1_pic5}
+\end{figure}
+
+In the second dialog, please select \textbf{Create a blank project}. An empty project is created and the next UI is displayed as follow.
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=5.5in]{source/picture/bai_1/pic3.PNG}
+    \caption{\textit{An empty project is created on PSpice}}
+    \label{bai1_pic3}
+\end{figure}
+
+\section{Design a circuit}
+
+\textbf{Step 1: } Double click on the Resistor in the device list and then move the mouse to the schematic design page. This device is in the \textbf{Favourite} library in default. While moving, \textbf{press R} to rotate the device before placing it (by left-mouse click), as follow:
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic6.PNG}
+    \caption{\textit{Place a resistor in PSpice}}
+    \label{bai1_pic6}
+\end{figure}
+
+\newpage
+\textbf{Step 2: } Double click on the value of the resistor, which is 1k in default, in order to change its resistance.
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=3in]{source/picture/bai_1/pic7.PNG}
+    \caption{\textit{Assign the resistance}}
+    \label{bai1_pic7}
+\end{figure}
+
+If the resistance is Ohm, no unit is required in the \textbf{Value} field. Repeat the first 2 steps to finalize all resistors in the circuit.
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=3in]{source/picture/bai_1/pic8.PNG}
+    \caption{\textit{Place other resistors in PSpice}}
+    \label{bai1_pic8}
+\end{figure}
+
+Some hot keys including \textbf{Ctrl + C} and \textbf{Ctrl + V} can be used to copy an old device.\\
+
+\textbf{Step 3: } In order to place a voltage supple, find the component named \textbf{VDC} (DC Voltage Source) in the favourite list, or filter it on the search area. Double click on the voltage supply and change to a desired value. The result after this step is expected as figure bellow.
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic9.PNG}
+    \caption{\textit{Place the power supply using VDC component}}
+    \label{bai1_pic9}
+\end{figure}
+
+\textbf{Step 4: } Wire all components by selecting the Wire command on the right panel (hot key is W).
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic10.PNG}
+    \caption{\textit{Wire the whole circuit}}
+    \label{bai1_pic10}
+\end{figure}
+
+By clicking a start point and an end point, a wire is placed. In order to delete, select the wire and press \textbf{Delete}. The picture of the circuit after this step is depicted as follow.
+\newpage
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic12.PNG}
+    \caption{\textit{Finish all wire in the circuit}}
+    \label{bai1_pic12}
+\end{figure}
+
+\textbf{Step 5: } Place a Ground symbol. This step is very important to analyze the voltage in a circuit as a reference voltage (0V) is required. The ground symbol is available on the right panel of the software.
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=5in]{source/picture/bai_1/pic11.PNG}
+    \caption{\textit{Add a ground symbol to the circuit}}
+    \label{bai1_pic11}
+\end{figure}
+
+Wiring the ground to a point in the circuit, the final result should be like the figure bellow.
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic13.PNG}
+    \caption{\textit{A ground point is added to the circuit}}
+    \label{bai1_pic13}
+\end{figure}
+
+\section{Create a simulation profile}
+Before the simulation is started, a simulation profile (or the simulation configuration) is required. From menu \textbf{PSpice}, select \textbf{New Simulation Profile} as follow:
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=5.5in]{source/picture/bai_1/pic14.PNG}
+    \caption{\textit{Create a simulation profile}}
+    \label{bai1_pic14}
+\end{figure}
+
+When the simulation setting dialog is appeared, please select the \textbf{Bias Point} for analysis type. 
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic15.PNG}
+    \caption{\textit{Select Bias Point simulation}}
+    \label{bai1_pic15}
+\end{figure}
+
+In PSpice, the bias point analysis calculates the node voltages and currents through the devices in the circuit. Bias point analysis also takes into account any voltage sources applied to the circuit and any initial conditions set on devices or nodes in the circuit. \\
+
+Finally, click on menu \textbf{PSpice} to select \textbf{Run}, or press \textbf{F11} to start the simulation. The simulation results are displayed directly on the circuit as follow:
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=4in]{source/picture/bai_1/pic16.PNG}
+    \caption{\textit{Volate and Current in the whole circuit}}
+    \label{bai1_pic16}
+\end{figure}
+
+In order to display simulation results, go to menu \textbf{PSpice}, select \textbf{Bias Point} and enable the information you need. Students are also proposed to double check their solutions with the simulation results.
+
+\def\answer{1}
+\section{Exercise and Report}
+In this section, students are proposed to work in some circuit analysis, mostly based on resistors. Some explanations are required and will be considered as a part of the report. Note that the calculation subsection expects to see formulas and equations rather than only the results.
+
+\subsection{Exercise 1}
+Given the following circuit. Calculate the value of the voltage $v_0$ and the current $i$. Then, simulate the circuit to check it out.
+
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width = 7cm]{source/picture/bai_1/Bai1_de.png}
+    \caption{Find the voltage and the current in the given circuit using KVL}
+    \label{lab1_ex1_de}
+\end{figure}
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+
+According to the: \dotfill\bigskip\\
+We have the first equation: \dotfill\bigskip(1)\\
+According to the: \dotfill\bigskip\\
+We have the second equation: \dotfill\bigskip(2)\\
+From (1) and (2) we have:\bigskip\\
+$v_0 = $ \dotfill\bigskip\\
+$i = $ \dotfill\bigskip\\
+
+\subsubsection{Simulation}
+
+\textbf{\textit{Tips:}}\\
+To get the Voltage Controlled Voltage Source (VCVS) from the PSpice, under the \textit{\textbf{Place}} menu, find \textbf{\textit{PSpice Component > Source > Controlled Sources > VCVS}}.
+
+A circuit used for the simulation in this exercise maybe like this:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 10cm]{source/picture/bai_1/Bai1_ps.png}
+    \caption{A circuit containing a Voltage Controlled Voltage Source in PSpice}
+    \label{ab1_ex1_ps}
+\end{figure}
+
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 2}
+Given the following circuit, students rearrange the circuit to clarify its serial and/or parallel topology. Then, apply the knowledge you've learned to find the equivalent resistance value between two circuit terminals A and F. Finally, perform the simulation to check if the current through the whole circuit is correctly calculated.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 10cm]{source/picture/bai_1/Bai2_de.png}
+    \caption{Find the equivalent resistance value between terminals A and F}
+    \label{lab1_ex2_de}
+\end{figure}
+
+\subsubsection{Rearrange the circuit}
+\textit{Insert the rearranged circuit here. Don't forget the resistance values and the nodes' names.}
+\newpage
+
+\subsubsection{Calculation}
+\textit{\textbf{Convention:}}\\
+\textit{The equivalent resistance between the two terminals A and B of a circuit segment containing only R1, R2, R3, and R4 may be named $R_{AB\_1234}$.}\\
+\\
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+\\
+$R_{CD\_3456} = $\dotfill\bigskip\\
+$R_{BE} = $\dotfill\bigskip\\
+$R_{AF} = $\dotfill\bigskip\\
+$I_{AB} = $\dotfill\bigskip\\
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 3}
+Given the following circuit, students rearrange the circuit to clarify its serial and/or parallel topology. Next, apply the knowledge you've learned to find the equivalent resistance value between two circuit terminals A and F, the voltage values at A, B, C, D, and E. Finally, perform the simulation to check your calculation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 11cm]{source/picture/bai_1/LAB1_EX3_de.png}
+    \caption{Find the whole-circuit equivalent resistance and the voltages at A, B, C, D, and E}
+    \label{lab1_ex3_de}
+\end{figure}
+
+\subsubsection{Rearrange the circuit}
+\textit{Insert the rearranged circuit here. Don't forget the resistance values and the nodes' names.}
+\newpage
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+\\
+$R_{AF} =$ \dotfill\bigskip\\
+$V_A = $ \dotfill\bigskip\\
+$V_B = $ \dotfill\bigskip\\
+$V_C = $ \dotfill\bigskip\\
+$V_D = $ \dotfill\bigskip\\
+$V_E = $ \dotfill\bigskip\\
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 4}
+Given the following circuit, find $I_1$, $I_2$, $I_3$, $V_a$, and $V_b$. Present your calculation steps and check them out by performing the simulation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 8cm]{source/picture/bai_1/lab1_ex4_de.png}
+    \caption{Find $I_1$, $I_2$, $I_3$, $V_a$, and $V_b$}
+    \label{lab1_ex4_de}
+\end{figure}
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+\\
+The whole circuit equivalent resistance: $R_{eq} =$ \dotfill\medskip\\
+$I_1 =$\dotfill\bigskip\\
+$I_2 =$\dotfill\bigskip\\
+$I_3 =$\dotfill\bigskip\\
+$V_a =$\dotfill\bigskip\\
+$V_b =$\dotfill\bigskip\\
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 5}
+Given the network as shown below:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 6cm]{source/picture/bai_1/lab1_ex5_de.png}
+    \caption{Select resistor R from the standard resistors list and do the following requirement}
+    \label{lab1_ex5_de}
+\end{figure}
+
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+
+\begin{enumerate}[label=\alph*.]
+    \item Find the required value for the resistor R.\bigskip\\
+    $R = $\dotfill\medskip
+    \item Use Table 2.1 in the lecture slide to select a standard 10\% tolerance resistor for R. R in the circuit may be a single resistor or a combination of many resistors as long as these resistors are meet the standard values and are available in the market.\bigskip\\
+    \\
+    The selected resistor:\dotfill
+    \dotfill\bigskip\par\mbox{}\dotfill
+    \item Using the resistor selected in (b), determine the voltage across the 3.9k resistor.\bigskip\\
+    The value of $V_1$ according to the selected resistor R:\dotfill
+    \dotfill\bigskip\par\mbox{}\dotfill
+    \item Calculate the percent error in the voltage V1, if the standard resistor selected in (b) is used.\\
+    \dotfill\par\mbox{}\dotfill
+    \item Determine the power rating for this standard component.\bigskip\\
+    $P_R =$\dotfill\
+\end{enumerate}
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+\newpage
+
+\subsection{Exercise 6}
+Given the following circuit. Apply the knowledge you've learned to transform it into another form in which you can find total equivalent resistance $R_{ab}$ more easily. Next, find the value of the current $i$ through the circuit and perform a simulation to check it out.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 9cm]{source/picture/bai_1/lab1_ex6_de.png}
+    \caption{Transform the circuit, then find the equivalent resistance $R_{ab}$ and the current $i$ through the circuit.} 
+    \label{lab1_ex6_de}
+\end{figure}
+
+\subsubsection{Circuit transformation}
+\textit{Insert the transformed circuit here.}
+\newpage
+\textit{Explain any calculations (i.e., write out the formulas you used).}\\
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\bigskip\\
+$R_{ab} = $\dotfill\bigskip\\
+$i =$\dotfill\bigskip
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 7}
+Given the following circuit. Apply the knowledge you've learned to transform it into another form in which you can find total equivalent resistance more easily. Next, find the value of the current $I_S$ through the circuit and perform a simulation to check it out.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 6cm]{source/picture/bai_1/lab1_ex7_de.png}
+    \caption{Transform the circuit, then find the equivalent resistance and the current $I_S$ through the circuit.} 
+    \label{lab1_ex7_de}
+\end{figure}
+
+\subsubsection{Circuit transformation}
+\textit{Insert the transformed circuit here.}
+\newpage
+\textit{Explain any calculations (i.e., write out the formulas you used).}\\
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\bigskip\\
+$R_{equivalent} = $\dotfill\bigskip\\
+$I_S =$\dotfill\bigskip
+
+\subsubsection{Simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 8}
+Given the following circuit with $p_2$, $p_3$, and $p_4$ are absorbing powers of unknown electrical elements. First, use the knowledge you've learned to identify whether they are active or passive elements (supplying or absorbing power). To an element absorbing power, use a pure resistor with a proper value as a representative. To a power element, use an ideal DC voltage source with the corresponding value as a representative. Next, redraw the circuit and calculate the power that each element absorbs. Note that here we use the passive sign convention. Then, perform a simulation with the elements determined by the previous step.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width =  10cm]{source/picture/bai_1/lab1_ex8_de.png}
+    \caption{Determine the unknown elements and calculate the absorbing power of each}
+    \label{lab1_ex8_de}
+\end{figure}
+
+\subsubsection{Identify the unknown elements}
+In Figure \ref{lab1_ex8_de}:\bigskip\\
+$p_2 =$ \dotfill $\longrightarrow$ \dotfill element\bigskip\\
+$p_3 =$ \dotfill $\longrightarrow$ \dotfill element\bigskip\\
+$p_4 =$ \dotfill $\longrightarrow$ \dotfill element\bigskip\\
+
+\subsubsection{Redraw the circuit for simulation}
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 9}
+Given the following circuit. Find the voltage $v$ and the current $i_x$. According to the result, determine the elements whose absorbing power respectively $p_1$ and $p_2$ are active or passive (calculations are required). Note that here we use the passive sign convention. If an element consumes power, use a pure resistor with an appropriate value as a representative. If it is a  power supply element, use a corresponding ideal DC voltage source to represent it. Perform a simulation to check how the circuit works.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{source/picture/bai_1/lab1_ex9_de.png}
+    \caption{Find the unknown elements and variables, then check them out by simulation}
+    \label{lab1_ex9_de}
+\end{figure}
+
+\subsubsection{Calculation}
+\textit{\textbf{Notes:}}\\
+\textit{Explanations, formulas, and equations are expected rather than only results.}\\
+
+According to the: \dotfill\bigskip\\
+We have:\bigskip\\
+$v =$\dotfill\bigskip\\
+$i_x =$\dotfill\bigskip\\
+So, we have:\bigskip\\
+$p_1 =$\dotfill $\longrightarrow$ \dotfill element.\bigskip\\
+$I_{AB} =$ \dotfill\bigskip\\
+$I_{BC} =$ \dotfill\bigskip\\
+$p_2 =$\dotfill $\longrightarrow$ \dotfill element.\bigskip\\
+$U_{CD} =$\dotfill\bigskip\\
+
+\subsubsection{Simulation}
+
+\textbf{\textit{Tips:}}\\
+To get the Current Controlled Voltage Source (CCVS) from the PSpice, under the \textit{\textbf{Place}} menu, find \textbf{\textit{PSpice Component > Source > Controlled Sources > CCVS}}.\\
+
+A circuit used for the simulation in this exercise maybe like this:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 10cm]{source/picture/bai_1/lab1_ex9_ps.png}
+    \caption{A circuit containing a Current Controlled Voltage Source in PSpice}
+    \label{lab1_ex9_ps}
+\end{figure}
+
+\textit{\textbf{Simulation result (image):}}
+\newpage
+
+\subsection{Exercise 10}
+Given the following circuit. Find the voltage V. You can do this in any way but remember to explain it in detail. Then simulate the circuit to check the result.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{source/picture/bai_1/lab1_ex10_de.png}
+    \caption{Find the voltage V}
+    \label{lab1_ex10_de}
+\end{figure}
+
+Answer:
+
+\vspace{6cm}
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+\dotfill\bigskip\par\mbox{}\dotfill
+
+
+
+% \dotfill\medskip\par\mbox{}\dotfill
+
+% \if\answer1
+%   Provide the solution here
+% \else
+%   The solution is hide
+% \fi \\

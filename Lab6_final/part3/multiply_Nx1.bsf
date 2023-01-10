@@ -1,0 +1,57 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 232 96)
+	(text "multiply_Nx1" (rect 5 0 55 12)(font "Arial" ))
+	(text "inst" (rect 8 64 20 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[(n_bits-1)..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "A[(n_bits-1)..0]" (rect 21 27 81 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B" (rect 0 0 5 12)(font "Arial" ))
+		(text "B" (rect 21 43 26 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "P[(n_bits-1)..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "P[(n_bits-1)..0]" (rect 138 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(parameter
+		"n_bits"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 64)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 232 -64 332 16))
+)

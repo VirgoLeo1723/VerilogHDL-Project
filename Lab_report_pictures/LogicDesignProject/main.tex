@@ -1,0 +1,179 @@
+\documentclass[12pt,twoside]{Book} 
+% \usepackage[a4paper,tmargin=1.5cm, bmargin=2cm, lmargin=1.5cm, rmargin=1.5cm]{geometry}
+\usepackage[a4paper,tmargin=2cm, bmargin=2.5cm, lmargin=3.5cm, rmargin=2.0cm]{geometry}
+\usepackage{color,calc,graphicx,soul,fourier}  
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,latexsym,amsfonts, bbm,mathtools, enumitem,esvect,commath,pifont}
+\usepackage[backend=biber, style=alphabetic, sorting=ynt]{biblatex}
+\usepackage{fourier}
+\usepackage{titling}
+\usepackage{longtable}
+\usepackage{gensymb}
+% \usepackage[utf8]{vietnam}
+\usepackage{afterpage}
+\usepackage{enumitem}
+\usepackage{xparse}
+\usepackage{tabvar}
+\usepackage{titlesec} 
+\usepackage{lipsum}
+\usepackage{tikz,pgf,tkz-tab}
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{xparse}
+\usepackage{hyperref}
+\usepackage{chngcntr}
+\usepackage{listings}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[lined,boxed,commentsnumbered]
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+%\definecolor{backcolour}{rgb}{0,0.95,0.92}
+%% Remember to load babel before loading this package or define the command \abstractname!
+	  
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+\urlstyle{same}
+\pagestyle{fancy}
+\lhead[]{}\chead[]{}\rhead[]{}
+\lfoot[\sl Page \thepage]{
+    \it Logic Design Project
+    \hfil 
+}
+\cfoot[]{}
+\rfoot[\it HCMUT - Computer Engineering]{\sl Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}  
+\setlength{\parindent}{0pt}
+\newcommand{\debugline}{\vspace{-0.5cm}\phantom{Debug error no line to end}}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{0}%
+    \newpage}
+
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{b}{n}%
+      \fontsize{40pt}{50pt}%
+      \selectfont}
+
+\titleformat{\chapter}[display]
+  {\bfseries\Huge}
+  {\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+  {2ex}
+  {\titlerule\vspace{1ex}\filleft}
+  [\vspace{1ex}\titlerule]
+  
+\addbibresource{references.bib} %Imports bibliography file
+
+% Input definition for questions
+
+
+\counterwithin*{section}{chapter}
+\counterwithin*{subsection}{section}
+\counterwithin*{subsubsection}{subsection}
+
+\newbox\allanswers
+\setbox\allanswers=\hbox{}
+\newcommand{\addanswer}[2]{%
+  \global\setbox\allanswers=\hbox{\unhbox\allanswers #1.~#2\quad}%
+}
+\newcommand{\showanswers}{%
+  \vfill
+  \begin{center}
+    ................
+  \end{center}
+  \noindent\unhbox\allanswers
+}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textcolor{black}{\textbf{\large VIETNAM NATIONAL UNIVERSITY HO CHI MINH CITY}} \\
+\textcolor{black}{\textbf{ \large HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY}}\\
+\textcolor{black}{\textbf{\large FACULTY OF COMPUTER SCIENCE AND ENGINEERING}}\\
+-----------------------------------------
+\end{center}
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=4.7cm]{source/picture/3_Logo_BK.png}
+\end{center}
+\end{figure}
+
+\vspace{0.7cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+	\multicolumn{1}{c}{\textcolor{black}{\textbf{{\large LOGIC DESIGN PROJECT REPORT}}}}\\
+    ~~\\
+    \textbf{{\textcolor{black}{\LARGE FPGA-BASED IMPLEMENTATION FOR }}}\\
+    
+    \textbf{\LARGE MACHINE LEARNING APPLICATION}\\
+    \textbf{\LARGE AND CONVOLUTION COMPUTING SIMULATION}\\
+    \\
+    \large Major: Computer Engineering
+\end{tabular}
+\end{center}
+
+\vspace{1.2cm}
+\hspace{5.7cm}\textbf{LOGIC DESIGN PROJECT COMMITEE 3}
+\begin{table}[h]
+\begin{tabular}{rll}
+\hspace{5cm}
+& \textbf{INSTRUCTOR:} &\textbf{PHAM QUOC CUONG}\\
+& & \textbf{PHAM DINH TRUNG}\\
+\\
+& \textbf{STUDENTS:} & \textbf{LE NGOC MINH THU }\\ 
+& &\textbf{BUI ANH KHOA}\\
+& &\textbf{NGUYEN PHAN ANH TUAN }
+
+\end{tabular}
+\end{table}
+\vspace{1cm}
+\begin{center}
+{\textcolor{black}{\footnotesize Winter Semester, AY 2022-2023}}
+\end{center}
+\end{titlepage}
+\newpage
+
+\tableofcontents
+
+\input{source/content/contents}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           GITHUB: phuongnam0907            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

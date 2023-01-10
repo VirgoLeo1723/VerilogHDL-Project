@@ -1,0 +1,107 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 232 192)
+	(text "part2" (rect 5 0 25 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 20 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 41 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 34 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 55 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ADD_SUB" (rect 0 0 47 12)(font "Arial" ))
+		(text "ADD_SUB" (rect 21 59 68 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "IN[7..0]" (rect 0 0 29 12)(font "Arial" ))
+		(text "IN[7..0]" (rect 21 75 50 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "IN_LSB[6..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "IN_LSB[6..0]" (rect 142 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "IN_MSB[6..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "IN_MSB[6..0]" (rect 140 43 195 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "OUT_LSB[6..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "OUT_LSB[6..0]" (rect 132 59 195 71)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 3))
+	)
+	(port
+		(pt 216 80)
+		(output)
+		(text "OUT_MSB[6..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "OUT_MSB[6..0]" (rect 129 75 195 87)(font "Arial" ))
+		(line (pt 216 80)(pt 200 80)(line_width 3))
+	)
+	(port
+		(pt 216 96)
+		(output)
+		(text "RESULT[7..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "RESULT[7..0]" (rect 135 91 195 103)(font "Arial" ))
+		(line (pt 216 96)(pt 200 96)(line_width 3))
+	)
+	(port
+		(pt 216 112)
+		(output)
+		(text "CARRY" (rect 0 0 38 12)(font "Arial" ))
+		(text "CARRY" (rect 157 107 195 119)(font "Arial" ))
+		(line (pt 216 112)(pt 200 112)(line_width 1))
+	)
+	(port
+		(pt 216 128)
+		(output)
+		(text "OVERFLOW" (rect 0 0 60 12)(font "Arial" ))
+		(text "OVERFLOW" (rect 135 123 195 135)(font "Arial" ))
+		(line (pt 216 128)(pt 200 128)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 160)(line_width 1))
+	)
+)
